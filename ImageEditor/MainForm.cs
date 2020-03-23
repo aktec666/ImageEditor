@@ -16,6 +16,7 @@ namespace ImageEditor
             InitializeComponent();
         }
 
+        // открытие файла
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog ImageOpen = new OpenFileDialog();
