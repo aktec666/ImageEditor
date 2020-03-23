@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +38,9 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainBox = new System.Windows.Forms.PictureBox();
+            this.EditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BrightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ContrastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainBox)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +49,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileToolStripMenuItem});
+            this.FileToolStripMenuItem,
+            this.EditToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1056, 28);
@@ -104,13 +109,38 @@
             // MainBox
             // 
             this.MainBox.BackColor = System.Drawing.Color.White;
-            this.MainBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MainBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainBox.Image = ((System.Drawing.Image)(resources.GetObject("MainBox.Image")));
             this.MainBox.Location = new System.Drawing.Point(0, 28);
             this.MainBox.Name = "MainBox";
             this.MainBox.Size = new System.Drawing.Size(1056, 579);
             this.MainBox.TabIndex = 1;
             this.MainBox.TabStop = false;
+            this.MainBox.Click += new System.EventHandler(this.MainBox_Click);
+            // 
+            // EditToolStripMenuItem
+            // 
+            this.EditToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BrightToolStripMenuItem,
+            this.ContrastToolStripMenuItem});
+            this.EditToolStripMenuItem.Name = "EditToolStripMenuItem";
+            this.EditToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.EditToolStripMenuItem.Text = "Редактировать";
+            this.EditToolStripMenuItem.Click += new System.EventHandler(this.EditToolStripMenuItem_Click);
+            // 
+            // BrightToolStripMenuItem
+            // 
+            this.BrightToolStripMenuItem.Name = "BrightToolStripMenuItem";
+            this.BrightToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.BrightToolStripMenuItem.Text = "Яркость";
+            this.BrightToolStripMenuItem.Click += new System.EventHandler(this.BrightToolStripMenuItem_Click);
+            // 
+            // ContrastToolStripMenuItem
+            // 
+            this.ContrastToolStripMenuItem.Name = "ContrastToolStripMenuItem";
+            this.ContrastToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ContrastToolStripMenuItem.Text = "Контрасность";
+            this.ContrastToolStripMenuItem.Click += new System.EventHandler(this.ContrastToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -141,6 +171,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.PictureBox MainBox;
+        private System.Windows.Forms.ToolStripMenuItem EditToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BrightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ContrastToolStripMenuItem;
     }
 }
 
